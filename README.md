@@ -17,8 +17,9 @@ Dataset can be downloaded from here: https://www.cs.toronto.edu/~kriz/cifar.html
 
 # Data Visualization
 <p align="center">
-<img src="#" />
+<img src="https://github.com/EashanKaushik/CIFAR-10_Classificaiton/blob/main/readme/evaluation.JPG" />
 </p>
+
 # Data Augmentation
 
 ```
@@ -32,10 +33,12 @@ horizontal_flip=True
 
 # Model Training
 <p align="center">
-<img src="#" />
+<img src="https://github.com/EashanKaushik/CIFAR-10_Classificaiton/blob/main/readme/model_training.JPG" />
 </p>
+
 # Model Evaluation
 <p align="center">
-<img src="#" />
+<img src="https://github.com/EashanKaushik/CIFAR-10_Classificaiton/blob/main/readme/model_eval.JPG" />
 </p>
+
 # Model Deployment

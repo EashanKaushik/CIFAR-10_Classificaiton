@@ -5,4 +5,4 @@ logs/
 .vscode/
 try.html
 dataset/
-model/
+model_training/model/
