@@ -1,63 +1,100 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>{{pagename}}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static',filename='css/noscript.css') }}" /></noscript>
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
-			</header>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>CIFAR-10 Classifiation</h2>
+								<p>This is a classification software for CIFAR-10 dataset. You can upload images and model will be able to predict name of the object in the image.</p>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+                            </div>
+						</header>
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
+									<h3 class="major">About the Model</h3>
+									<p>I have used a simple CNN model for training and testing on the dataset. The model achieved an accuracy of 80% on both train and test data.</p>
+
+									<p>The model is able to predict 10 types of objetcs namely: </p>
+
+                                    <ul>
+                                        <li>Airplane</li>
+                                        <li>Automobile</li>
+                                        <li>Bird</li>
+                                        <li>Cat</li>
+                                        <li>Deer</li>
+                                        <li>Dog</li>
+                                        <li>Frog</li>
+                                        <li>Horse</li>
+                                        <li>Ship</li>
+                                        <li>Truck</li>
+                                    </ul>
+
+									<h3 class="major">Get started</h3>
+									<p>Its simple upload an image and make preicitons!!!</p>
+                                    <br>
+									<section class="features">
+										<form action="#" method="post" enctype="multipart/form-data">
+                                            <div class="fields">
+                                                <input type="file" name="imgfile" id="imgfile" >
+                                            </div>
+                                            <ul class="actions">
+                                                <li><input type="submit" value="Predict" class="button primary fit"/></li>
+                                            </ul>
+                                        </form>
+
+									</section>
+
+                                    {% if file_upload %}
+
+
+                                        <div class="col-12"><span class="image fit"><img src="{{ url_for('static', filename='images/upload.JPG') }}"></span></div>
+
+                                        <h1>{{ data['class_label'] }}</h1>
+
+                                        <div class="col-12"><span class="image fit"><img src="{{ url_for('static', filename='images/graph.JPG') }}"></span></div>
+
+                                        
+                                    {% endif %}
+
+								</div>
+							</div>
+
 					</section>
+
+				<!-- Footer -->
+                <footer class="wrapper style1 align-center">
+                    <div class="inner">
+                        <h2 class="major">Get in touch</h2>
+                        <ul class="icons">
+                            <li><a href="https://www.linkedin.com/in/eashan-kaushik-7b4454168/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/EashanKaushik/CIFAR-10_Classificaiton" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://eashankaushik.github.io/" class="fa fa-address-card"><span class="label"></span></a></li>
+                        </ul>
+                    </div>
+                </footer>
 
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
 
 	</body>
 </html>
