@@ -10,4 +10,4 @@ app = Flask(__name__)
 app.add_url_rule('/predict', 'predict', views.predict, methods=['GET', 'POST'])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080)
