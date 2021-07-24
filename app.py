@@ -1,5 +1,5 @@
 from flask import Flask, url_for
-from app import views
+from deploy import views
 # from flask.ext.scss import Scss
 
 
@@ -10,4 +10,4 @@ app = Flask(__name__)
 app.add_url_rule('/predict', 'predict', views.predict, methods=['GET', 'POST'])
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=80)

@@ -1,6 +1,6 @@
 from flask import url_for, render_template, Flask, request
-from app.utils import make_prediction
-from keras.preprocessing import image
+from deploy.utils import make_prediction
+from tensorflow.keras.preprocessing import image
 import numpy as np
 
 # def home():

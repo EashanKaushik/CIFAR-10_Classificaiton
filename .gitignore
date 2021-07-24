@@ -6,6 +6,4 @@ logs/
 try.html
 dataset/
 model_training/model/
-*.ppk
-*.pem
-cifar-10-public
+keys/

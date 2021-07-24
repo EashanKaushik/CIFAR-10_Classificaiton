@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
 		<noscript><link rel="stylesheet" href="{{ url_for('static',filename='css/noscript.css') }}" /></noscript>
+		<script src="https://kit.fontawesome.com/c672d9fe8d.js" crossorigin="anonymous"></script>
+
 	</head>
 	<body class="is-preload">
 
@@ -27,7 +29,7 @@
 									<h3 class="major">About the Model</h3>
 									<p>I have used a simple CNN model for training and testing on the dataset. The model achieved an accuracy of 80% on both train and test data.</p>
 
-									<p>The model is able to predict 10 types of objetcs namely: </p>
+									<p>The model is able to predict 10 types of objects namely: </p>
 
                                     <ul>
                                         <li>Airplane</li>
@@ -43,7 +45,7 @@
                                     </ul>
 
 									<h3 class="major">Get started</h3>
-									<p>Its simple upload an image and make preicitons!!!</p>
+									<p>Its simple upload an image and make predictions!!!</p>
                                     <br>
 									<section class="features">
 										<form action="#" method="post" enctype="multipart/form-data">
@@ -64,7 +66,7 @@
 
                                         <h1>{{ data['class_label'] }}</h1>
 
-                                        <div class="col-12"><span class="image fit"><img src="{{ url_for('static', filename='images/graph.JPG') }}"></span></div>
+                                        <div class="col-12"><span class="image fit"><img src="{{ url_for('static', filename='images/graph.jpg') }}"></span></div>
 
                                         
                                     {% endif %}
