@@ -41,4 +41,9 @@ horizontal_flip=True
 <img src="https://github.com/EashanKaushik/CIFAR-10_Classificaiton/blob/main/readme/model_eval.JPG" />
 </p>
 
+The confusion matrix of the model is visualized as a heatmap.
+
 # Model Deployment
+Deployment of the model was done on Ubuntu EC2 Instance using gunicorn and nginx.
+
+The website is hosted on: http://18.119.128.90/predict
